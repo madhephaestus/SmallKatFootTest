@@ -17,10 +17,12 @@ CSG slicer = new Cylinder(radius, neckThicknes).toCSG()
 				.difference(new Cylinder(neckRad,neckRad+neckThicknes, neckThicknes,15).toCSG())
 				.toZMax()
 				.movez(d)
-				
+CSG slicer2 = new Cylinder(radius*2, radius*2).toCSG().toZMax()
+				.movez(d-neckThicknes)
 
 CSG ball  = new Sphere(radius,32, 16).toCSG()
 				.difference(slicer)
+				//.difference(slicer2)
 				.union(new Cylinder(radius-2, 10).toCSG().toZMax())
 				
 				
