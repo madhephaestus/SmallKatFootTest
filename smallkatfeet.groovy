@@ -5,7 +5,7 @@ import eu.mihosoft.vrl.v3d.Sphere
 //Your code here
 
 def radius = 10
-def neckRad = 5
+def neckRad = 6
 def arclen=16.5
 def neckThicknes =2
 def theta = (arclen*360)/(2.0*3.14159*radius)
@@ -21,3 +21,6 @@ CSG slicer = new Cylinder(radius, neckThicknes).toCSG()
 
 CSG ball  = new Sphere(radius,32, 16).toCSG()
 				.difference(slicer)
+				.union(new Cylinder(radius-2, 10).toCSG().toZMax())
+				
+				
