@@ -6,8 +6,8 @@ import eu.mihosoft.vrl.v3d.Sphere
 
 def radius = 10
 def neckRad = 6
-def arclen=17.5
-def neckThicknes =2
+def arclen=18.5
+def neckThicknes =3.5
 def theta = (arclen*360)/(2.0*3.14159*radius)
 def internalAngle = (90-(theta/2))
 def d = Math.sin(Math.toRadians(internalAngle))*radius
