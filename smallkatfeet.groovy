@@ -28,6 +28,6 @@ CSG ball  = new Sphere(radius,32, 16).toCSG()
 				.difference(slicer)
 				//.difference(slicer2)
 				.union(foot)
-				.union(new Cylinder(radius-2, 10).toCSG().toZMax())
+				.union(new Cylinder(radius-2, ballRadius).toCSG().toZMax())
 				
 				
